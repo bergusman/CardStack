@@ -14,6 +14,7 @@
 		AD08F7961A1D308600B793BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD08F7951A1D308600B793BE /* Images.xcassets */; };
 		AD08F7991A1D308600B793BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD08F7971A1D308600B793BE /* LaunchScreen.xib */; };
 		AD08F7A51A1D308600B793BE /* CardStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD08F7A41A1D308600B793BE /* CardStackTests.m */; };
+		AD08F7B01A1D30C900B793BE /* CardStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AD08F7AF1A1D30C900B793BE /* CardStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		AD08F79E1A1D308600B793BE /* CardStackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardStackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD08F7A31A1D308600B793BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD08F7A41A1D308600B793BE /* CardStackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardStackTests.m; sourceTree = "<group>"; };
+		AD08F7AE1A1D30C900B793BE /* CardStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardStack.h; sourceTree = "<group>"; };
+		AD08F7AF1A1D30C900B793BE /* CardStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +84,8 @@
 		AD08F7871A1D308600B793BE /* CardStack */ = {
 			isa = PBXGroup;
 			children = (
-				AD08F78C1A1D308600B793BE /* AppDelegate.h */,
-				AD08F78D1A1D308600B793BE /* AppDelegate.m */,
-				AD08F78F1A1D308600B793BE /* ViewController.h */,
-				AD08F7901A1D308600B793BE /* ViewController.m */,
-				AD08F7921A1D308600B793BE /* Main.storyboard */,
-				AD08F7951A1D308600B793BE /* Images.xcassets */,
-				AD08F7971A1D308600B793BE /* LaunchScreen.xib */,
+				ADBB3E361A1D336600D310E0 /* Sources */,
+				ADBB3E371A1D337800D310E0 /* Resources */,
 				AD08F7881A1D308600B793BE /* Supporting Files */,
 			);
 			path = CardStack;
@@ -117,6 +115,45 @@
 				AD08F7A31A1D308600B793BE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADBB3E361A1D336600D310E0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				ADBB3E381A1D339000D310E0 /* Views & Controllers */,
+				AD08F78C1A1D308600B793BE /* AppDelegate.h */,
+				AD08F78D1A1D308600B793BE /* AppDelegate.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		ADBB3E371A1D337800D310E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD08F7921A1D308600B793BE /* Main.storyboard */,
+				AD08F7971A1D308600B793BE /* LaunchScreen.xib */,
+				AD08F7951A1D308600B793BE /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		ADBB3E381A1D339000D310E0 /* Views & Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADBB3E391A1D33AA00D310E0 /* Card Stack */,
+				AD08F78F1A1D308600B793BE /* ViewController.h */,
+				AD08F7901A1D308600B793BE /* ViewController.m */,
+			);
+			name = "Views & Controllers";
+			sourceTree = "<group>";
+		};
+		ADBB3E391A1D33AA00D310E0 /* Card Stack */ = {
+			isa = PBXGroup;
+			children = (
+				AD08F7AE1A1D30C900B793BE /* CardStack.h */,
+				AD08F7AF1A1D30C900B793BE /* CardStack.m */,
+			);
+			name = "Card Stack";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +258,7 @@
 			files = (
 				AD08F7911A1D308600B793BE /* ViewController.m in Sources */,
 				AD08F78E1A1D308600B793BE /* AppDelegate.m in Sources */,
+				AD08F7B01A1D30C900B793BE /* CardStack.m in Sources */,
 				AD08F78B1A1D308600B793BE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +450,7 @@
 				AD08F7AA1A1D308600B793BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD08F7AB1A1D308600B793BE /* Build configuration list for PBXNativeTarget "CardStackTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +459,7 @@
 				AD08F7AD1A1D308600B793BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

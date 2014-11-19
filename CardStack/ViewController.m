@@ -8,7 +8,11 @@
 
 #import "ViewController.h"
 
+#import "CardStack.h"
+
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet CardStack *cardStack;
 
 @end
 
@@ -16,12 +20,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSMutableArray *cards = [NSMutableArray array];
+    
+    for (NSInteger i = 0; i < 10; i++) {
+        UIView *card = [[UIView alloc] init];
+        card.backgroundColor = [UIColor colorWithHue:(1.0 / i) saturation:1 brightness:1 alpha:1];
+        [cards addObject:card];
+        
+        UILabel *label = [[UILabel alloc] init];
+        label.text = [NSString stringWithFormat:@"%ld", i];
+        label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        label.textAlignment = NSTextAlignmentCenter;
+        label.font = [UIFont systemFontOfSize:30];
+        [card addSubview:label];
+        
+        card.layer.cornerRadius = 5;
+        
+        card.layer.shadowOpacity = 0.2;
+    }
+    
+    self.cardStack.cards = cards;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)popAction:(id)sender {
+    [self.cardStack pop];
 }
 
 @end
